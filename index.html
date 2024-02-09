@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Protfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/ed426148c0.js" crossorigin="anonymous" ></script>
+  </head>
+
+  <body>
+    <button id="scrollUpBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" alt="name" class="logo" />
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#protfolio">Protfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <h1><span id="typingText"></span><br />Hi, I'm <span>Kanha</span><br> Bisoyi</h1>
+       </div>      
+      </div>
+    </div>
+
+    <!-- about section-->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-co1-1">
+            <img src="images/user.png" alt="users pic" />
+          </div>
+          <div class="about-co1-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Hi there! 👋 I'm Kanha Bisoyi, I completed my matriculation at St. Vincent Convent School and my intermediate studies at Arihant Junior College. I pursued my B.Tech from NIST, I'm passionate about web development, particularly PHP. I love building websites and applications that are both functional and user-friendly. Let's team up and create something awesome!
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Web Devlopment</span><br />Web app Development</li>
+                <li><span>PHP Devlopment</span><br />Web Projects with Dynamic PHP</li>
+                <li><span>Full Stack</span><br />Frontend Elegance with Backend Power</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>2023 - Course</span><br />Web Development Training at Internshala</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2019 - 2023</span><br />Degree from NIST</li>
+                <li><span>2017 - 2019</span><br />Intermediate from Arihant Junior College</li>
+                <li><span>2017</span><br />Matriculation from St. Vincent Convent School</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fas fa-code"></i>
+            <h2>Web Devlopment</h2>
+            <p>Web development refers to the creating, building, and maintaining of websites. It includes aspects such as web design, web publishing, web programming, 
+              <br>and database management. </p>
+            <a href="https://www.geeksforgeeks.org/web-development/">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-server"></i>
+            <h2>PHP Devlopment</h2>
+            <p>PHP is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML. </p>
+            <a href="https://www.php.net/manual/en/getting-started.php">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Protfolio -->
+    <div id="protfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/work-1.png" alt="work" />
+            <div class="layer">
+              <h3>Web-based Calculator</h3>
+              <p>an Interactive Web Calculator Using HTML, CSS, and JavaScript</p>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-2.png" alt="work" />
+            <div class="layer">
+              <h3>Tic Tac Toe game</h3>
+              <p>Play Tic Tac Toe: A Beginner's Coding Adventure!</p>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+      </div>
+    </div>
+
+    <!-- contact -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i> kanhabisoyi21@gmail.com</p>
+            <p><i class="fa-sharp fa-solid fa-square-phone"></i> 6370036164</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/in/kanha-bisoyi-b75120253"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input type="email" name="Email" placeholder="Your Email" required/>
+              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright &copy; Kanha Bisoyi | All Rights Reserved.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzM4pwt2x68LI0iv2RUsLlRWG0N3dms2kC19j7rns813f3aaEcs9RphBvUfqfUOb3Iw/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const msg = document.getElementById('msg')
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+              msg.innerHTML = ""
+            },5000)
+            form.reset()
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+    
+  </body>
+</html>
