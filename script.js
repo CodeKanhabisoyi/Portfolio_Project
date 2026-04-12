@@ -75,3 +75,13 @@ function erase() {
 
 // Start the typing animation
 type();
+
+function showMessage() {
+  const msg = document.getElementById("successMessage");
+  msg.style.display = "block";
+
+  // Hide after 3 seconds (optional)
+  setTimeout(() => {
+    msg.style.display = "none";
+  }, 5000);
+}
